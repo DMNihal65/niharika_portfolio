@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Niharika, Issue 01: data, edited</title>
+  <meta name="description" content="D M Niharika is a final-year Information Science student in Bagalkot, learning data analytics and data engineering by building things.">
+  <meta name="theme-color" content="#f6f0e6">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+  <!-- loader: the issue goes to print; four ink plates slide into register -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__sheet">
+      <div class="loader__top"><span>Issue 01</span><span>Going to print</span></div>
+      <div class="loader__plates">
+        <span class="plate plate--plum">N</span><span class="plate plate--rouge">N</span><span class="plate plate--butter">N</span><span class="plate plate--blush">N</span>
+      </div>
+      <div class="loader__foot"><span class="loader__label">Printing</span><span class="loader__count"><span class="loader__num">0</span>%</span></div>
+    </div>
+  </div>
+
+  <!-- nav -->
+  <header class="nav">
+    <a class="nav__mark" href="#cover" aria-label="Niharika, back to the cover">N<em>.</em></a>
+    <div class="nav__right">
+      <a class="nav__resume" href="/niharika-resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="nav__contents" type="button" aria-expanded="false" aria-controls="menu"><span class="nav__label">Contents</span><span class="nav__lines" aria-hidden="true"><i></i><i></i></span></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__inner" aria-label="Contents">
+      <p class="menu__kicker">In this issue</p>
+      <ol class="menu__list">
+        <li><a href="#letter" data-menu><span class="menu__pg">04</span>Editor's letter</a></li>
+        <li><a href="#features" data-menu><span class="menu__pg">06</span>Features</a></li>
+        <li><a href="#skills" data-menu><span class="menu__pg">10</span>The skills index</a></li>
+        <li><a href="#notes" data-menu><span class="menu__pg">12</span>Notes on the way</a></li>
+        <li><a href="#offduty" data-menu><span class="menu__pg">14</span>Off duty</a></li>
+        <li><a href="#contact" data-menu><span class="menu__pg">16</span>Back cover</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- running folio: the page number rolls as the sections change -->
+  <div class="folio" aria-hidden="true">
+    <span>Niharika · Issue 01</span>
+    <span class="folio__pg">p.<span class="folio__mask"><span class="folio__num">01</span></span></span>
+  </div>
+
+  <main>
+    <!-- p.01 cover -->
+    <section class="cover" id="cover" data-page="01" aria-labelledby="mast">
+      <div class="cover__page">
+        <div class="cover__strip">
+          <span>Issue 01 · Winter 2026</span>
+          <span class="cover__strip-mid">Final year, Information Science</span>
+          <span>Free to read</span>
+        </div>
+        <div class="cover__art" aria-hidden="true">
+          <span class="shape shape--sun"></span>
+          <span class="shape shape--arch"></span>
+          <span class="shape shape--pill"></span>
+          <span class="shape shape--dot"></span>
+        </div>
+        <h1 class="mast" id="mast" aria-label="Niharika">
+          <span class="mast__c" aria-hidden="true">N</span><span class="mast__c" aria-hidden="true">i</span><span class="mast__c" aria-hidden="true">h</span><span class="mast__c" aria-hidden="true">a</span><span class="mast__c" aria-hidden="true">r</span><span class="mast__c" aria-hidden="true">i</span><span class="mast__c" aria-hidden="true">k</span><span class="mast__c" aria-hidden="true">a</span>
+        </h1>
+        <div class="cover__lines">
+          <div class="coverline coverline--lead">
+            <p class="coverline__kicker">The data issue</p>
+            <p class="coverline__head">Learning to make messy data <em>behave.</em></p>
+          </div>
+          <ul class="coverline__list">
+            <li><a href="#feature-1"><span>An AI that takes the meeting notes</span><span class="pg">p.06</span></a></li>
+            <li><a href="#feature-2"><span>Spotting crop pests from one photo</span><span class="pg">p.08</span></a></li>
+            <li><a href="#offduty"><span>Off duty: dance, styling, trends</span><span class="pg">p.14</span></a></li>
+          </ul>
+        </div>
+        <svg class="sticker" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="sticker-path" d="M100 100 m-72 0 a72 72 0 1 1 144 0 a72 72 0 1 1 -144 0"/></defs>
+          <circle cx="100" cy="100" r="99" class="sticker__disc"/>
+          <text class="sticker__text"><textPath href="#sticker-path">New talent · Class of 2027 · New talent · Class of 2027 · </textPath></text>
+          <text class="sticker__mid" x="100" y="112" text-anchor="middle">Hi!</text>
+        </svg>
+      </div>
+      <div class="cover__shadow" aria-hidden="true"></div>
+    </section>
+
+    <!-- p.02 contents -->
+    <section class="contents page" id="contents" data-page="02" aria-labelledby="contents-title">
+      <div class="contents__head">
+        <h2 class="contents__title" id="contents-title">Contents</h2>
+        <p class="contents__dek">A short issue about a student who likes data best once it has been tidied up. Six stories, sixteen pages, no filler.</p>
+      </div>
+      <ol class="toc">
+        <li><a class="toc__row" href="#letter"><span class="toc__pg">04</span><span class="toc__name">Editor's letter</span><span class="toc__dek">Who I am, in one page</span><span class="toc__arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="toc__row" href="#features"><span class="toc__pg">06</span><span class="toc__name">Features</span><span class="toc__dek">Two projects, told properly</span><span class="toc__arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="toc__row" href="#skills"><span class="toc__pg">10</span><span class="toc__name">The skills index</span><span class="toc__dek">What I know, rated honestly</span><span class="toc__arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="toc__row" href="#notes"><span class="toc__pg">12</span><span class="toc__name">Notes on the way</span><span class="toc__dek">College, volunteering, next year</span><span class="toc__arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="toc__row" href="#offduty"><span class="toc__pg">14</span><span class="toc__name">Off duty</span><span class="toc__dek">Dance, styling and trends</span><span class="toc__arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="toc__row" href="#contact"><span class="toc__pg">16</span><span class="toc__name">Back cover</span><span class="toc__dek">Say hello</span><span class="toc__arrow" aria-hidden="true">&rarr;</span></a></li>
+      </ol>
+    </section>
+
+    <!-- p.04 editor's letter -->
+    <section class="letter page page--blush" id="letter" data-page="04" aria-labelledby="letter-title">
+      <p class="kicker">Editor's letter</p>
+      <h2 class="letter__title" id="letter-title">Hello, I'm <em>Niharika.</em></h2>
+      <div class="letter__cols">
+        <p class="letter__p letter__p--drop">Right now I'm in my final year of Information Science and Engineering at Basaveshwara Engineering College in Bagalkot. I want to work in <span class="mark">data analytics and data engineering</span>, and I'm learning both the best way I know: by building things.</p>
+        <p class="letter__p">So far that means <span class="mark">Python, SQL and databases</span>, small backends in FastAPI and PostgreSQL, and a lot of time in Pandas cleaning data until it can actually answer a question. Next on my list is the bigger stuff: <span class="mark">cloud tools and Spark</span>, used properly and at scale.</p>
+        <blockquote class="letter__quote">&ldquo;Good data is like a good outfit. Nobody sees the work, only that it looks right.&rdquo;</blockquote>
+        <p class="letter__p">Outside class I've been a class representative, and I helped run the IEEE WIE Congress as a volunteer. Outside data, I dance, and I follow fashion and styling more closely than I'd probably admit in an interview.</p>
+        <p class="letter__sign">Niharika</p>
+      </div>
+    </section>
+
+    <!-- p.06-09 features -->
+    <section class="features page page--plum" id="features" data-page="06" aria-labelledby="features-title">
+      <div class="features__head">
+        <p class="kicker">Features</p>
+        <h2 class="features__title" id="features-title">Two things I built</h2>
+      </div>
+      <div class="spreads">
+        <article class="spread spread--one" id="feature-1" data-page="06">
+          <div class="spread__text">
+            <p class="spread__no">Feature 01 <span>· p.06</span></p>
+            <h3 class="spread__title">The meeting that takes its own <em>notes</em></h3>
+            <p class="spread__dek">Upload a meeting recording and get back a transcript, a short summary, the decisions that were made and who is doing what next.</p>
+            <ul class="spread__points">
+              <li>Speech to text with OpenAI Whisper.</li>
+              <li>Google Gemini turns the transcript into a summary, key decisions, action items and takeaways.</li>
+              <li>A FastAPI and PostgreSQL backend keeps the meetings, transcripts and users organised, so you can find a meeting again later.</li>
+            </ul>
+            <ul class="credits"><li>Whisper</li><li>Gemini</li><li>FastAPI</li><li>PostgreSQL</li></ul>
+          </div>
+          <div class="spread__art meet" aria-hidden="true">
+            <div class="meet__audio"><span class="meet__label">audio.mp3</span><div class="wave"></div></div>
+            <div class="meet__transcript">
+              <span class="meet__label">Transcript</span>
+              <i style="--w:92%"></i><i style="--w:78%"></i><i style="--w:85%"></i><i style="--w:60%"></i>
+            </div>
+            <div class="meet__cards">
+              <div class="mcard mcard--rouge"><b>Summary</b><i style="--w:90%"></i><i style="--w:70%"></i></div>
+              <div class="mcard mcard--butter"><b>Decisions</b><i style="--w:80%"></i><i style="--w:55%"></i></div>
+              <div class="mcard mcard--blush"><b>Action items</b><i style="--w:75%"></i><i style="--w:65%"></i></div>
+            </div>
+          </div>
+        </article>
+        <article class="spread spread--two" id="feature-2" data-page="08">
+          <div class="spread__text">
+            <p class="spread__no">Feature 02 <span>· p.08</span></p>
+            <h3 class="spread__title">Reading a <em>leaf</em></h3>
+            <p class="spread__dek">A farmer-friendly app: take a photo of a crop, find out which pest is on it, and get advice on what to do about it.</p>
+            <ul class="spread__points">
+              <li>A convolutional neural network (CNN) picks out the pest from the photo.</li>
+              <li>It suggests organic and chemical treatments, with safety guidelines.</li>
+              <li>It checks WeatherAPI data and warns when wind would carry the spray where it shouldn't go.</li>
+            </ul>
+            <ul class="credits"><li>CNN</li><li>Python</li><li>WeatherAPI</li><li>Web and mobile</li></ul>
+          </div>
+          <div class="spread__art leaf" aria-hidden="true">
+            <svg class="leaf__svg" viewBox="0 0 400 400">
+              <path class="leaf__body" d="M200 40 C310 90 340 220 230 340 C215 356 185 356 170 340 C60 220 90 90 200 40Z"/>
+              <path class="leaf__vein" d="M200 60 V340 M200 140 L140 110 M200 190 L130 165 M200 240 L145 225 M200 140 L260 110 M200 190 L270 165 M200 240 L255 225"/>
+              <g class="leaf__bug"><ellipse cx="248" cy="196" rx="13" ry="9"/><ellipse cx="236" cy="210" rx="9" ry="6"/></g>
+              <rect class="leaf__box" x="214" y="172" width="64" height="56" rx="6" pathLength="1"/>
+            </svg>
+            <span class="leaf__tag">Pest found</span>
+            <div class="leaf__advice">
+              <span class="advice advice--organic">Organic option</span>
+              <span class="advice advice--chem">Chemical option + safety</span>
+              <span class="advice advice--wind">Windy today: spray later</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- p.10 skills index -->
+    <section class="skills page" id="skills" data-page="10" aria-labelledby="skills-title">
+      <div class="skills__head">
+        <div>
+          <p class="kicker">The skills index</p>
+          <h2 class="skills__title" id="skills-title">Rated <em>honestly</em></h2>
+        </div>
+        <p class="skills__dek">I'm still a student. Some of these I use every week, some I'm comfortable with, and some I'm learning right now. The dots say which.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter skills by level">
+        <button class="filter is-on" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="3" aria-pressed="false">Use often <span class="dots" data-l="3"></span></button>
+        <button class="filter" type="button" data-filter="2" aria-pressed="false">Comfortable <span class="dots" data-l="2"></span></button>
+        <button class="filter" type="button" data-filter="1" aria-pressed="false">Learning now <span class="dots" data-l="1"></span></button>
+      </div>
+      <ul class="chips">
+        <li class="chip" data-l="3">Python<small>Language</small></li>
+        <li class="chip" data-l="3">SQL<small>Language</small></li>
+        <li class="chip" data-l="3">Pandas<small>Data</small></li>
+        <li class="chip" data-l="3">PostgreSQL<small>Database</small></li>
+        <li class="chip" data-l="3">MySQL<small>Database</small></li>
+        <li class="chip" data-l="3">FastAPI<small>Backend</small></li>
+        <li class="chip" data-l="3">Jupyter<small>Data</small></li>
+        <li class="chip" data-l="3">Git and GitHub<small>Tools</small></li>
+        <li class="chip" data-l="2">NumPy<small>Data</small></li>
+        <li class="chip" data-l="2">Data cleaning and ETL<small>Concepts</small></li>
+        <li class="chip" data-l="2">MongoDB<small>Database</small></li>
+        <li class="chip" data-l="2">Power BI<small>BI</small></li>
+        <li class="chip" data-l="2">Excel<small>BI</small></li>
+        <li class="chip" data-l="2">REST APIs<small>Backend</small></li>
+        <li class="chip" data-l="2">Whisper and Gemini APIs<small>AI</small></li>
+        <li class="chip" data-l="2">Docker<small>Tools</small></li>
+        <li class="chip" data-l="2">Bash and Linux basics<small>Tools</small></li>
+        <li class="chip" data-l="1">Data modelling<small>Concepts</small></li>
+        <li class="chip" data-l="1">Spark and PySpark<small>Big data</small></li>
+        <li class="chip" data-l="1">Kafka basics<small>Big data</small></li>
+        <li class="chip" data-l="1">AWS: S3, Glue, Redshift<small>Cloud</small></li>
+        <li class="chip" data-l="1">Azure<small>Cloud</small></li>
+        <li class="chip" data-l="1">Machine learning, CNNs<small>AI</small></li>
+      </ul>
+    </section>
+
+    <!-- p.12 notes on the way -->
+    <section class="notes page page--butter" id="notes" data-page="12" aria-labelledby="notes-title">
+      <p class="kicker">Notes on the way</p>
+      <h2 class="notes__title" id="notes-title">So far, <em>and next</em></h2>
+      <ol class="timeline">
+        <li class="tl"><span class="tl__year">2023</span><div class="tl__body"><h3>Started a BE in Information Science</h3><p>Basaveshwara Engineering College, Bagalkot.</p></div></li>
+        <li class="tl"><span class="tl__year tl__year--word">Also</span><div class="tl__body"><h3>Class representative</h3><p>The link between my class and our teachers: raising academic issues and keeping everyone in the loop.</p></div></li>
+        <li class="tl"><span class="tl__year">2025</span><div class="tl__body"><h3>Volunteer, IEEE NKSS WIE Congress</h3><p>Helped organise and run the Women in Engineering congress.</p></div></li>
+        <li class="tl"><span class="tl__year">2026</span><div class="tl__body"><h3>Final year, building</h3><p>An AI meeting platform, a crop pest detector, and a lot of practice with data pipelines.</p></div></li>
+        <li class="tl tl--next"><span class="tl__year">2027</span><div class="tl__body"><h3>Graduating, and looking for my first data role</h3><p>Analytics or data engineering, somewhere I can learn from people who do it well.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- p.14 off duty -->
+    <section class="offduty page page--plum" id="offduty" data-page="14" aria-labelledby="off-title">
+      <p class="kicker">Off duty</p>
+      <h2 class="off__title" id="off-title">When the laptop <em>closes</em></h2>
+      <div class="off__grid">
+        <article class="off off--rouge">
+          <div class="swatches" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h3 class="off__name">Dance</h3>
+          <p>The one place I'm not thinking about anything else.</p>
+        </article>
+        <article class="off off--blush">
+          <div class="swatches" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h3 class="off__name">Styling</h3>
+          <p>Makeup and beauty styling. Colour theory I actually enjoy.</p>
+        </article>
+        <article class="off off--butter">
+          <div class="swatches" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h3 class="off__name">Trends</h3>
+          <p>I watch fashion the way I like to watch data: noticing what changes, and why.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- p.16 back cover -->
+    <section class="contact page" id="contact" data-page="16" aria-labelledby="contact-title">
+      <p class="kicker">Back cover</p>
+      <h2 class="contact__title" id="contact-title"><span class="contact__line">Let's</span> <span class="contact__line"><em>talk.</em></span></h2>
+      <p class="contact__dek">Hiring an intern or a graduate who likes tidy data and keeps learning? I'd love to hear from you.</p>
+      <div class="contact__row">
+        <a class="contact__mail" href="mailto:niharikadm11@gmail.com" data-copy="niharikadm11@gmail.com" data-cursor="Copy">niharikadm11@gmail.com</a>
+        <div class="contact__links">
+          <a class="btn btn--solid" href="/niharika-resume.pdf" target="_blank" rel="noopener" data-magnetic>Read my resume</a>
+          <a class="btn" href="#" data-todo="linkedin" data-magnetic>LinkedIn</a>
+        </div>
+      </div>
+      <footer class="footer">
+        <svg class="barcode" viewBox="0 0 120 40" aria-hidden="true"></svg>
+        <p>D M Niharika · Bagalkot, Karnataka · Issue 01, 2026</p>
+        <a class="footer__top" href="#cover">Back to the cover &uarr;</a>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
