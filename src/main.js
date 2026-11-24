@@ -266,6 +266,13 @@ function initLetter() {
   gsap.from('.letter__p', { y: 30, opacity: 0, duration: 1, ease: 'expo.out', stagger: 0.1, scrollTrigger: { trigger: '.letter__cols', start: 'top 80%', once: true } });
   const q = new SplitText('.letter__quote', { type: 'words' });
   gsap.fromTo(q.words, { opacity: 0.15 }, { opacity: 1, stagger: 0.1, ease: 'none', scrollTrigger: { trigger: '.letter__quote', start: 'top 80%', end: 'bottom 55%', scrub: true } });
+  // the editor's photo develops: it slides up out of a mask and settles from a slight zoom, then drifts as you read
+  gsap.timeline({ scrollTrigger: { trigger: '.portrait', start: 'top 85%', once: true } })
+    .from('.portrait__print', { yPercent: 18, rotate: -9, opacity: 0, duration: 1.4, ease: 'expo.out' }, 0)
+    .fromTo('.portrait__frame', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.2, ease: 'power3.inOut' }, 0.15)
+    .from('.portrait__img', { scale: 1.25, duration: 1.8, ease: 'expo.out' }, 0.15)
+    .from('.portrait__stamp', { scale: 0, rotate: -90, duration: 1, ease: 'back.out(2.5)' }, 0.9);
+  gsap.to('.portrait__img', { yPercent: -6, ease: 'none', scrollTrigger: { trigger: '.letter', start: 'top bottom', end: 'bottom top', scrub: true } });
   // the signature writes itself left to right
   gsap.fromTo('.letter__sign', { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.6, ease: 'power2.inOut', scrollTrigger: { trigger: '.letter__sign', start: 'top 88%', once: true } });
 }

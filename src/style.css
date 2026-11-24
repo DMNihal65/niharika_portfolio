@@ -182,7 +182,21 @@ h2 em, h3 em { font-weight: 300; font-variation-settings: "opsz" 144, "SOFT" 100
 /* editor's letter */
 .letter__title { margin-top: 2rem; font-size: clamp(3.4rem, 9vw, 10rem); max-width: 12ch; }
 .letter__title em { color: var(--rouge); }
-.letter__cols { margin-top: 9vh; columns: 2; column-gap: clamp(2rem, 5vw, 5rem); font-size: 1.22rem; line-height: 1.6; max-width: 72rem; }
+/* the letter runs beside the editor's portrait, printed and pinned like a photo on a page */
+.letter__layout { margin-top: 9vh; display: grid; grid-template-columns: minmax(16rem, 0.75fr) minmax(0, 1.6fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+.portrait { position: sticky; top: 14vh; }
+.portrait__print { padding: 0.9rem 0.9rem 0; background: var(--paper); border-radius: 0.4rem; box-shadow: 0 30px 60px -30px oklch(0.27 0.07 345 / 0.55), 0 2px 6px oklch(0.27 0.07 345 / 0.12); rotate: -2.5deg; transition: rotate 700ms var(--ease-out), translate 700ms var(--ease-out); }
+.portrait__frame { overflow: hidden; border-radius: 0.2rem; aspect-ratio: 4 / 5; background: var(--paper-2); }
+/* 12% taller than the frame, so the reading drift (up to -6%) never shows the frame's edge */
+.portrait__img { display: block; width: 100%; height: 112%; object-fit: cover; object-position: 50% 0%; transform-origin: 50% 30%; }
+.portrait__cap { display: flex; justify-content: space-between; align-items: baseline; padding: 0.8rem 0.2rem 1rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+.portrait__cap em { font-family: var(--serif); font-size: 1.15rem; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--rouge); font-variation-settings: "opsz" 72, "SOFT" 100, "WONK" 1; }
+.portrait__stamp {
+  position: absolute; right: -1.4rem; top: -1.4rem; display: grid; place-items: center; width: 5.6rem; aspect-ratio: 1; border-radius: 50%; background: var(--rouge); color: var(--paper);
+  font-family: var(--serif); font-style: italic; font-size: 1.35rem; font-variation-settings: "opsz" 72, "SOFT" 100, "WONK" 1; rotate: 12deg;
+}
+@media (hover: hover) and (pointer: fine) { .portrait:hover .portrait__print { rotate: 0deg; translate: 0 -6px; } }
+.letter__cols { columns: 2; column-gap: clamp(2rem, 4vw, 4rem); font-size: 1.18rem; line-height: 1.6; }
 .letter__p { margin-bottom: 1.3rem; }
 .letter__p--drop::first-letter { float: left; font-family: var(--serif); font-weight: 500; font-size: 5.2em; line-height: 0.82; padding: 0.06em 0.12em 0 0; color: var(--rouge); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
 .mark { background-image: linear-gradient(var(--butter), var(--butter)); background-repeat: no-repeat; background-position: 0 88%; background-size: var(--mark, 100%) 0.5em; padding: 0 0.1em; }
@@ -340,6 +354,7 @@ h2 em, h3 em { font-weight: 300; font-variation-settings: "opsz" 144, "SOFT" 100
 .toast.is-on { opacity: 1; transform: none; }
 
 /* ---------- responsive ---------- */
+@media (max-width: 1180px) { .letter__cols { columns: 1; } }
 @media (max-width: 860px) {
   .nav__resume { display: none; }
   .cover__strip-mid { display: none; }
@@ -352,6 +367,9 @@ h2 em, h3 em { font-weight: 300; font-variation-settings: "opsz" 144, "SOFT" 100
   .toc__dek { grid-column: 2; }
   .toc__arrow { display: none; }
   .letter__cols { columns: 1; }
+  .letter__layout { grid-template-columns: 1fr; }
+  .portrait { position: relative; top: 0; width: min(78%, 22rem); margin: 0 auto 1rem; }
+  .portrait__stamp { right: -0.8rem; top: -0.8rem; width: 4.4rem; font-size: 1.1rem; }
   .spread { grid-template-columns: 1fr; min-height: 0; }
   .spread__art { min-height: 24rem; }
   .meet__cards { grid-template-columns: 1fr 1fr; }
